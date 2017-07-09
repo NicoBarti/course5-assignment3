@@ -1,0 +1,15 @@
+<table class="table table-striped" ng-if="list.items.length">
+  <tr style="background-color: #99ccff">
+      <th><h4>Menu Item</h4></th>
+      <th><h4>Code</h4></th>
+      <th><h4>Description</h4></th>
+  </tr>
+
+   <tr ng-repeat="item in list.items">
+      <th> {{item.name}}</th>
+      <th> {{item.short_name}}</th>
+      <th> {{item.description}}</th>
+      <th><button type="button" class="btn btn-warning" ng-click="list.onRemove({index: $index})">Don't want this one!</button>
+    </tr>
+</table>
+
